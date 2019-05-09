@@ -22,6 +22,7 @@ ts_mod4 = file4.variables['TS']
 lat = file1.variables['lat']
 lon = file1.variables['lon']
 
+## TODO: make into function ##
 # calculate monthly average
 # make sure to include weights
 gw = [0.000136695007530996, 0.00109333584416416, 0.002185476141635, 
@@ -95,16 +96,15 @@ line1 = plt.plot(ts_yr_avg_mod1,color='black',linewidth=4)
 line2 = plt.plot(ts_yr_avg_mod2,color="b")
 line3 = plt.plot(ts_yr_avg_mod3,color="g")
 line4 = plt.plot(ts_yr_avg_mod4,color="r")
-plt.ylim((286,295))
+plt.ylim((282,292))
 plt.xlabel('Year')
 plt.ylabel('Temperature (K)')
 plt.title('Q&D Yearly Average Temperature')
 plt.legend(labels = ("Control","Kor1","TeoKor","Fin2"),
-           loc='upper right', title = "E.2000 Simulation")
-plt.show()
-
+           loc='lower right', title = "E 2000 Simulation")
 save_loc = "/Users/ash/Documents/GitHub/GCM_Analysis/Figures/"
-plt.savefig(save_loc+"E2000_ModelTempDiffs.png")
+plt.savefig(save_loc+"E2000_ModelTempDiffs.png",dpi=500)
+plt.show()
 
 # close files
 file1.close()
