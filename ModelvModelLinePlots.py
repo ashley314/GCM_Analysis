@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import netCDF4 as nc
 
 # set path for location of data
-path = "/Users/ash/Documents/GitHub/GCM_Analysis/Data/"
+path = "/Users/ash/Documents/Gradschool/Research/Miocene/Data/"
 
 # open data files
 file1 = nc.Dataset(path+"E.2000_C5.TS.nc")
@@ -102,7 +102,7 @@ plt.ylabel('Temperature (K)')
 plt.title('Q&D Yearly Average Temperature')
 plt.legend(labels = ("Control","Kor1","TeoKor","Fin2"),
            loc='lower right', title = "E 2000 Simulation")
-save_loc = "/Users/ash/Documents/GitHub/GCM_Analysis/Figures/"
+save_loc = "/Users/ash/Documents/Gradschool/Research/Miocene/Figures/"
 plt.savefig(save_loc+"E2000_ModelTempDiffs.png",dpi=500)
 plt.show()
 
